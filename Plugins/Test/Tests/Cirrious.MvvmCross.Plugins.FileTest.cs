@@ -37,5 +37,17 @@ namespace MvvmCross.Plugins.Cirrious
             Assert.IsTrue(files.Any(o => o.Equals(store.PathCombine(root, fileNameA))));
             Assert.IsTrue(files.Any(o => o.Equals(store.PathCombine(root, fileNameB))));
         }
+
+        [TestMethod]
+        public void TestEnsureFolderExists_1LevelsDeep()
+        {
+            IMvxFileStore store = PluginFactory.CreateFileStore();
+            var root = store.NativePath(string.Empty);
+            var folderToCreate = store.PathCombine(root, Guid.NewGuid().ToString());
+
+            store.EnsureFolderExists(folderToCreate);
+
+            Assert.IsTrue(store.FolderExists(folderToCreate));
+        }
     }
 }
