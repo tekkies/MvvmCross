@@ -39,7 +39,7 @@ namespace MvvmCross.Plugins.Cirrious
         }
 
         [TestMethod]
-        public void TestEnsureFolderExists_1LevelsDeep()
+        public void TestEnsureFolderExists_AbsolutePath()
         {
             IMvxFileStore store = PluginFactory.CreateFileStore();
             var root = store.NativePath(string.Empty);
