@@ -49,5 +49,19 @@ namespace MvvmCross.Plugins.Cirrious
 
             Assert.IsTrue(store.FolderExists(folderToCreate));
         }
+
+        [TestMethod]
+        public void TestEnsureFolderExists_RelativePath()
+        {
+            IMvxFileStore store = PluginFactory.CreateFileStore();
+            var root = store.NativePath(string.Empty);
+            var relativePath = store.PathCombine(Guid.NewGuid().ToString(), Guid.NewGuid().ToString());
+            var absolutePath = store.PathCombine(root, relativePath);
+
+            store.EnsureFolderExists(relativePath);
+
+            Assert.IsTrue(store.FolderExists(absolutePath));
+        }
+
     }
 }

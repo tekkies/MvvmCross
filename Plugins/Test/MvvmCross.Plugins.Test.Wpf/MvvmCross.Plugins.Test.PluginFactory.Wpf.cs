@@ -8,7 +8,9 @@ namespace MvvmCross.Plugins.Test
     {
         public static IMvxFileStore CreateFileStore()
         {
-            return new MvxWpfFileStore(GetTemporaryDirectory());
+            var temporaryDirectory = GetTemporaryDirectory();
+            Directory.SetCurrentDirectory(temporaryDirectory);
+            return new MvxWpfFileStore(temporaryDirectory);
         }
 
         public static string GetTemporaryDirectory()
