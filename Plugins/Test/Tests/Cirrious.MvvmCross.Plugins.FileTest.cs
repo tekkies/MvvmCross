@@ -55,7 +55,7 @@ namespace MvvmCross.Plugins.Cirrious
         {
             IMvxFileStore store = PluginFactory.CreateFileStore();
             var root = store.NativePath(string.Empty);
-            var relativePath = store.PathCombine(Guid.NewGuid().ToString(), Guid.NewGuid().ToString());
+            var relativePath = Guid.NewGuid().ToString();
             var absolutePath = store.PathCombine(root, relativePath);
 
             store.EnsureFolderExists(relativePath);
@@ -63,5 +63,30 @@ namespace MvvmCross.Plugins.Cirrious
             Assert.IsTrue(store.FolderExists(absolutePath));
         }
 
+        [TestMethod]
+        public void TestEnsureFolderExists_AbsolutePath_2LevelsDeep()
+        {
+            IMvxFileStore store = PluginFactory.CreateFileStore();
+            var root = store.NativePath(string.Empty);
+            var relativePath = store.PathCombine(Guid.NewGuid().ToString(), Guid.NewGuid().ToString());
+            var folderToCreate = store.PathCombine(root, relativePath);
+
+            store.EnsureFolderExists(folderToCreate);
+
+            Assert.IsTrue(store.FolderExists(folderToCreate));
+        }
+
+        [TestMethod]
+        public void TestEnsureFolderExists_RelativePath_2LevelsDeep()
+        {
+            IMvxFileStore store = PluginFactory.CreateFileStore();
+            var root = store.NativePath(string.Empty);
+            var relativePath = store.PathCombine(Guid.NewGuid().ToString(), Guid.NewGuid().ToString());
+            var absolutePath = store.PathCombine(root, relativePath);
+
+            store.EnsureFolderExists(relativePath);
+
+            Assert.IsTrue(store.FolderExists(absolutePath));
+        }
     }
 }
