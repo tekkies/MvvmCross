@@ -116,14 +116,14 @@
     <Compile Include="..\Tests\Cirrious.MvvmCross.Plugins.FileTest.cs">
       <Link>Tests\Cirrious.MvvmCross.Plugins.FileTest.cs</Link>
     </Compile>
-    <Compile Include="MvvmCross.Plugins.Test.PluginFactory.WindowsStore.cs" />
+    <Compile Include="MvvmCross.Plugins.File.WindowsStore.Test.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
-    <None Include="MvvmCross.Plugins.Test.WindowsStore_TemporaryKey.pfx" />
+    <None Include="MvvmCross.Plugins.File.WindowsStore.Test_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Images\UnitTestLogo.scale-100.png">
@@ -140,11 +140,11 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Cirrious\File\Cirrious.MvvmCross.Plugins.File.WindowsStore\Cirrious.MvvmCross.Plugins.File.WindowsStore.csproj">
+    <ProjectReference Include="..\..\Cirrious.MvvmCross.Plugins.File.WindowsStore\Cirrious.MvvmCross.Plugins.File.WindowsStore.csproj">
       <Project>{c85a5d4f-2b79-45ff-bb92-9c8d96b47fdd}</Project>
       <Name>Cirrious.MvvmCross.Plugins.File.WindowsStore</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Cirrious\File\Cirrious.MvvmCross.Plugins.File\Cirrious.MvvmCross.Plugins.File.csproj">
+    <ProjectReference Include="..\..\Cirrious.MvvmCross.Plugins.File\Cirrious.MvvmCross.Plugins.File.csproj">
       <Project>{19EE04D6-7EE0-4FE8-AB10-4623D93F165A}</Project>
       <Name>Cirrious.MvvmCross.Plugins.File</Name>
     </ProjectReference>

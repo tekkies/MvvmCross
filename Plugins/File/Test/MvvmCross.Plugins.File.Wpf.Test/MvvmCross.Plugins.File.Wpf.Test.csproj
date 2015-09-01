@@ -36,7 +36,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="nunit.framework">
-      <HintPath>..\..\..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
+      <HintPath>..\..\..\..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
   </ItemGroup>
@@ -60,17 +60,19 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Cirrious\File\Cirrious.MvvmCross.Plugins.File.Wpf\Cirrious.MvvmCross.Plugins.File.Wpf.csproj">
+    <ProjectReference Include="..\..\Cirrious.MvvmCross.Plugins.File.Wpf\Cirrious.MvvmCross.Plugins.File.Wpf.csproj">
       <Project>{d45af3ae-ef2e-4424-b5ab-698f1b8092ab}</Project>
       <Name>Cirrious.MvvmCross.Plugins.File.Wpf</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Cirrious\File\Cirrious.MvvmCross.Plugins.File\Cirrious.MvvmCross.Plugins.File.csproj">
+    <ProjectReference Include="..\..\Cirrious.MvvmCross.Plugins.File\Cirrious.MvvmCross.Plugins.File.csproj">
       <Project>{19ee04d6-7ee0-4fe8-ab10-4623d93f165a}</Project>
       <Name>Cirrious.MvvmCross.Plugins.File</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
