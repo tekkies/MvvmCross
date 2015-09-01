@@ -410,6 +410,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvvmCross.Plugins.File.Wind
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvvmCross.Plugins.File.Wpf.Test", "Plugins\File\Test\MvvmCross.Plugins.File.Wpf.Test\MvvmCross.Plugins.File.Wpf.Test.csproj", "{9572E329-EEC1-4ADE-A826-54FF8408D964}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{05D92A91-9124-4263-AB96-780F0FB42DA4}"
+	ProjectSection(SolutionItems) = preProject
+		Plugins\File\Test\Tests\Cirrious.MvvmCross.Plugins.FileTest.cs = Plugins\File\Test\Tests\Cirrious.MvvmCross.Plugins.FileTest.cs
+		Plugins\File\Test\Tests\Cirrious.MvvmCross.Plugins.IFileTest.cs = Plugins\File\Test\Tests\Cirrious.MvvmCross.Plugins.IFileTest.cs
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -3815,5 +3821,6 @@ Global
 		{F65A8FFA-B3B5-4165-9999-3A2477C80C12} = {6A71ABE8-2F48-467E-A331-CF64C2EAC534}
 		{F07497C5-2C13-4AAF-936C-DF9513DC1B85} = {F65A8FFA-B3B5-4165-9999-3A2477C80C12}
 		{9572E329-EEC1-4ADE-A826-54FF8408D964} = {F65A8FFA-B3B5-4165-9999-3A2477C80C12}
+		{05D92A91-9124-4263-AB96-780F0FB42DA4} = {F65A8FFA-B3B5-4165-9999-3A2477C80C12}
 	EndGlobalSection
 EndGlobal
